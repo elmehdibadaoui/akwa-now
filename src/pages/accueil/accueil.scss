@@ -1,0 +1,30 @@
+page-accueil {
+
+    .toolbarRight{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        margin-right: 16px;
+    }
+    .service-title{
+        text-align: center;
+        color: grey;
+    }
+    .service-img{
+        height: 60px;
+    }
+    
+    .service-utilise{
+        line-height: 5px;
+        font-size: 10px;
+        text-align: center;
+        p{
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    }
+    .img-line{
+        height: 2px;
+    }
+
+}

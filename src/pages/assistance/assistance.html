@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title text-center>Assictance</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="notifications($event)">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="gotoHome()">
+                <ion-icon name="md-home"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+      <ion-list class="messages">
+          <ion-grid>
+              <ion-row *ngFor="let message of messages" dir="{{message.isBoot ? '' : 'rtl'}}">
+                    <ion-col col-2> 
+                        <img src="{{message.avatar}}"/>
+                    </ion-col>
+                    <ion-col col-10> 
+                      <ion-card >
+                          <ion-card-content dir="rtl">{{message.message}}</ion-card-content>
+                      </ion-card>                 
+                      <label class="w-100 {{message.isBoot ? 'text-left' : 'text-right'}}" dir="ltr">{{message.time}}</label>
+                    </ion-col>
+              </ion-row>
+
+              <ion-row class="last-row">
+                    <ion-col col-11 class="p-0">
+                        <ion-input placeholder="Message.." #msg></ion-input>
+                    </ion-col>
+                    <ion-col col-1 class="p-0 d-flex" text-center>
+                        <img class="send-img align-self-center" (click)="send()" src="assets/imgs/iconSend.png"/>
+                    </ion-col>   
+              </ion-row>
+          </ion-grid>
+      </ion-list>
+      <!-- <ion-footer>
+        <ion-grid end>
+            <ion-row>
+                <ion-col class="p-0">
+                    <ion-input placeholder="Message.." #msg></ion-input>
+                </ion-col>
+                <ion-col class="p-0 d-flex" col-1 text-center>
+                    <img class="send-img align-self-center" (click)="send()" src="assets/imgs/iconSend.png"/>
+                </ion-col>             
+            </ion-row>
+        </ion-grid>
+      </ion-footer> -->
+
+
+</ion-content>

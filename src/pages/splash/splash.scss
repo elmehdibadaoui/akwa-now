@@ -1,0 +1,91 @@
+.ios, .md {
+    page-splash {
+        #splash-page .scroll-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img {
+                top: -150px;
+                position: relative;
+                width: 160px;
+                -webkit-animation-name: MoveDownUp; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+                animation-name: MoveDownUp;
+                animation-duration: 4s;
+            }
+    
+            img {
+                display: block !important;
+            }
+        } 
+    } 
+}
+
+/* Standard syntax */
+@keyframes MoveDownUp {
+    0% {
+        min-width: 150px;
+        top: 0;
+    }
+    10% {
+        min-width: 200px;
+    }
+    20% {
+        min-width: 150px;
+    }
+    30% {
+        min-width: 200px;
+    }
+    40% {
+        min-width: 150px;
+        top: 0;
+    }
+    100% {
+        top: -150px;
+        position: relative;
+        width: 160px;
+    }
+}
+ 
+@keyframes fadeInAndSpin {
+ 
+    100% {
+        opacity: 1;
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+ 
+}
+//  Authentification
+
+#authentification-page{
+    background-image: url("../assets/imgs/bg.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    #lienVisiteur
+    {
+        color: white;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+    #divBtn
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-left: -16px;
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+    #iconImage
+    {
+        top: 50px;
+        position: relative;
+        width: 200px;
+    }
+    .scroll-content {
+        overflow: hidden;
+    }
+
+}

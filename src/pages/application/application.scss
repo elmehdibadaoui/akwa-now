@@ -1,0 +1,88 @@
+page-application {
+    ion-content{
+        background-color: #EFF2F4;
+    }
+    .bg-gray{
+        background-color: #f8f8f8;        
+    }
+    .swiper-container{
+        height: initial;
+    }
+    .profile{
+
+        p{
+            font-weight: bold;
+        }
+        span{
+            color: #727272;
+            text-align: center;
+        }
+        img{
+            align-self: center;
+        }
+        .profil-row{
+            line-height: 10px;
+            align-self: center;
+
+            img{
+               width: 10px;
+            }
+        }
+    
+    }
+    ion-card img{
+        width: initial;
+        span{
+            font-size: 10px;
+            font-weight: 500;
+        }
+    }
+    ion-slides{
+        height: initial;
+    }
+    .dashBtn{
+        font-size: 9px;
+        line-height: 20px;
+        font-weight: bold;
+        margin: 0;
+        padding: 5px;
+        .dashBtn1{
+            background-color: #ffffff;
+            color: black;
+            padding:5px 1px;
+           
+        }
+        .dashBtn2{
+            color: white;
+            padding:5px 1px;
+           
+        }
+        .dashBtn3{
+            background-color: #86AE46;
+            color: white;
+            padding:5px 1px;
+        }
+
+        img{
+            height: 60px;
+            height: 30px;
+        }
+    }
+    
+    .service{
+        line-height: 30px;
+        color: #3F3F3F;
+        img {
+            height: 50px;
+            width: 50px;
+        }
+        p {
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: 0 !important;
+    }
+}

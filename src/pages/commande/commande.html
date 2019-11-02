@@ -1,0 +1,231 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title text-center>Commande</ion-title>
+     <ion-buttons end>
+        <button ion-button icon-only (click)="notifications($event)">
+           <ion-icon name="md-notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="gotoHome()">
+           <ion-icon name="md-home"></ion-icon>
+        </button>
+     </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class='progress'>
+    <div class='progress_inner'>
+      <div class='progress_inner__step'>
+        <label for='step-1'>Commande</label>
+      </div>
+      <div class='progress_inner__step'>
+        <label for='step-2'>Informations</label>
+      </div>
+      <div class='progress_inner__step'>
+        <label for='step-3'>Paiement</label>
+      </div>
+      <div class='progress_inner__step'>
+        <label for='step-4'>Terminer</label>
+      </div>
+      <!-- <div class='progress_inner__step'>
+        <label for='step-5'>Send gift</label>
+      </div> -->
+      <input checked='checked' id='step-1' name='step' type='radio'>
+      <input id='step-2' name='step' type='radio'>
+      <input id='step-3' name='step' type='radio'>
+      <input id='step-4' name='step' type='radio'>
+      <!-- <input id='step-5' name='step' type='radio'> -->
+      <div class='progress_inner__bar'></div>
+      <div class='progress_inner__bar--set'></div>
+      <div class='progress_inner__tabs'>
+        <div class='tab tab-0'>
+          
+
+
+
+
+
+
+
+
+
+          <h6 class="lblTitels text-left">1-Choisissez Votre Bouteille</h6>
+          <div class="divSlide">
+            <ion-card text-center>
+                <img src="assets/imgs/afriquiagaz.png" class="imageBouteille mx-auto"/>
+                <h6 style="margin:0px;">Afriquia Gaz</h6>
+                <img src="assets/imgs/checked_abdellah.png" class="imgChecked mx-auto"/>
+            </ion-card>
+          <!-- <ion-slides text-center pager >
+              <ion-slide >
+                  <img src="assets/imgs/afriquiagaz.png" class="imageBouteille"/>
+                  <h6 style="margin:0px;">Afriquia Gaz</h6>
+                  <img src="assets/imgs/checked_abdellah.png" class="imgChecked"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/imgs/butafric.png" class="imageBouteille"/>
+                  <h6 style="margin:0px;">Butafric </h6>
+                  <img src="assets/imgs/checked_abdellah.png" class="imgChecked"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/imgs/Nationalgaz.png" class="imageBouteille"/>
+                  <h6 style="margin:0px;">National Gaz</h6>
+                  <img src="assets/imgs/checked_abdellah.png" class="imgChecked"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/imgs/Tissir.png" class="imageBouteille"/>
+                  <h6 style="margin:0px;">Tissir </h6>
+                  <img src="assets/imgs/checked_abdellah.png" class="imgChecked"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/imgs/UltraGaz.png" class="imageBouteille"/>
+                  <h6 style="margin:0px;">Ultra Gaz</h6>
+                  <img src="assets/imgs/checked_abdellah.png" class="imgChecked"/>
+              </ion-slide>
+            </ion-slides> -->
+          </div>
+          
+          <ion-grid  style="background-color: #eeeeee;">
+              <ion-row>
+                <ion-col col-7>
+                    <h6 class="lblQuantite text-left">2-Choisissez la Quantité</h6>
+                </ion-col>
+                <ion-col col-1 class="d-flex">
+                    <button ion-button class="btnAddSou align-self-center"> <ion-icon name="add"></ion-icon></button>
+                </ion-col>
+                <ion-col col-3>
+                   <input type="text" class="txtBox1" placeholder="0"/>
+                  </ion-col>
+                  <ion-col col-1 class="d-flex">
+                      <button ion-button class="btnAddSou align-self-center"> <ion-icon name="ios-remove"></ion-icon></button>
+                    </ion-col>
+              </ion-row>
+            </ion-grid>
+          
+            <ion-grid >
+              <ion-row>
+                <ion-col col-2>
+                    <img src="assets/imgs/afriquiagaz.png" class="imgToggle"/>
+                </ion-col>
+                <ion-col col-8>
+                   <h6 style="font-size: 10px;">Disposez-vous de XX beuteille(s) Afriquia Gaz vide(s)?</h6>
+                  </ion-col>
+                  <ion-col class="tog" col-2 text-center>
+                      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
+          
+            <h6 class="lblTitels text-left">3-Choisissez la date et le créneau de livraison</h6>
+          
+            <ion-grid text-center>
+              <ion-row>
+                <ion-col col-2 >
+                    <img src="assets/imgs/calendar.png"  style=" width: 32px; top: 3px; position: relative;"/>
+                </ion-col>
+                <ion-col end>
+                    <ion-item>
+                        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate" ng-value="YYYY-MM-DD" class="datetime1"></ion-datetime>
+                      </ion-item>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-2>
+                      <img src="assets/imgs/clock.png" style=" width: 32px; top: 3px; position: relative;" />
+                  </ion-col>
+                  <ion-col col-4 >
+                      <ion-datetime class="date1" displayFormat="HH:mm" [(ngModel)]="myDate1"   ></ion-datetime>
+                    </ion-col>
+                    <ion-col col-2>
+                      <h6 style="position: relative;bottom: 3px;">:</h6>
+                      </ion-col>
+                      <ion-col col-4>
+                          <ion-datetime class="date2" displayFormat="HH:mm" [(ngModel)]="myDate2"></ion-datetime>
+                     </ion-col>
+                </ion-row>
+            </ion-grid>
+          
+            <h6 class="lblTitels text-left">4-Activer le service premium</h6>
+              <div class="divPremium">
+              <ion-grid >
+                  <ion-row >
+                       <ion-col>
+                           <img src="assets/imgs/stopwatch.png" class="imgToggle"/>
+                       </ion-col>
+                       <ion-col style="bottom: 21px;">
+                           <h6 class="premium">10 Dh</h6>
+                           <ion-label class="premium">LIVRAISON RAPIDE</ion-label>
+                         </ion-col>
+                         <ion-col>
+                             <img src="assets/imgs/star_android.png" id="imgStar" />
+                         </ion-col>
+                         <ion-col>
+                             <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+                         </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+          
+              <h6 class="lblTitels text-left">5-Ajouter un code de promo</h6>
+              <div id="divPromo">
+                  <ion-grid>
+                      <ion-row >
+                        <ion-col col-8>
+                            <input type="text" placeholder="Entrer votre code promo ici" id="txtPromo" />
+                        </ion-col>
+                        <ion-col col-4>
+                            <button ion-button  style="width: 97px; height: 36px; background-color: gray;">Utiliser</button>
+                          </ion-col>
+                      </ion-row>
+                    </ion-grid>
+              </div>
+              <div class="footerPage">
+                <ion-grid >
+                  <ion-row>
+                    <ion-col col-10 ><ion-label style="margin: 0;">0 Produit(s)</ion-label></ion-col>
+                    <ion-col col-2 ><h6 style="margin: 0;">0  Dhs</h6></ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col col-10 ><ion-label style="margin: 0;">Service premium</ion-label></ion-col>
+                      <ion-col col-2><h6 style="margin: 0;">0  Dhs</h6></ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-10><ion-label style="margin: 0;">Coupon</ion-label></ion-col>
+                        <ion-col col-2><h6 style="margin: 0;">-0%</h6></ion-col>
+                      </ion-row>
+                      <ion-row >
+                          <ion-col > <img src="assets/imgs/border_horizental.png" style="width: 100%;" height="2px; "  /></ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-7><h6 style="margin: 0;">Total a payer</h6> <h1 style="margin: 0;">0 Dhs</h1></ion-col>
+                            <ion-col col-5>  <button ion-button  style="width: 97px; height: 36px; margin: 0; left: 27px;position: relative;">Continuer</button></ion-col>
+                         </ion-row>
+                </ion-grid>
+              </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class='tab tab-1'>
+          <h1>Prepare gift</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor ipsum, eleifend vitae massa non, dignissim finibus eros. Maecenas non eros tristique nisl maximus sollicitudin.</p>
+        </div>
+        <div class='tab tab-2'>
+          <h1>Pack gift</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor ipsum, eleifend vitae massa non, dignissim finibus eros. Maecenas non eros tristique nisl maximus sollicitudin.</p>
+        </div>
+        <div class='tab tab-3'>
+          <h1>Decorate box</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor ipsum, eleifend vitae massa non, dignissim finibus eros. Maecenas non eros tristique nisl maximus sollicitudin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

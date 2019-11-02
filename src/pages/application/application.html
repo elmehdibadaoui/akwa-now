@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-navbar color="{{app.color}}">
+      <ion-title text-center>{{app.name}}</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="notifications($event)">
+          <ion-icon name="md-notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="gotoHome()">
+          <ion-icon name="md-home"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Profile -->
+  <ion-grid class="profile bg-white px-4 py-1" >
+      <ion-row >
+          <ion-col col-3 class="p-3"> 
+            <img src="assets/imgs/profil.png" class="rounded" />
+          </ion-col>
+          <ion-col col-8 class="service-utilise-vertical" class="profil-row">
+            <div>
+                <p>{{app.owner}}</p>
+                <img src="assets/imgs/phone.png" />
+                <span text-center>{{app.phone}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-1 class="d-flex">
+            <div class="align-self-center">
+                <img  src="assets/imgs/next.png"  />
+            </div>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <ion-slides #slider [initialSlide]="app_index" (ionSlideDidChange)="slideChanged()" pager>
+    <ion-slide *ngFor="let app of apps">
+
+      <div class="dashBtn row text-center bg-gray">
+          <div class="col">
+              <div class="bg-white dashBtn1 rounded" (click)="gotoMescommande()">
+                <img src="assets/imgs/mes_command.png" />
+                <span class="d-block">Mes commandes</span>
+              </div>
+          </div>
+          <div class="col">
+              <ion-card class="m-0 w-100 border-0 text-center" color="{{app.color}}">
+                <ion-card-content class="dashBtn2 rounded ">
+                    <img class="mx-auto" src="assets/imgs/allogazBtn.png" />
+                  <span class="d-block">Commander</span>
+                </ion-card-content>
+              </ion-card>
+          </div>
+          <div class="col">
+              <div class="dashBtn3 rounded">
+                <img src="assets/imgs/appel.png" />
+                <span class="d-block">Nous appeler</span>
+              </div>
+          </div>
+      </div>
+      
+      <ion-grid class="service bg-white ">
+        <ion-row>
+            <ion-col col-4>
+              <div text-center>
+                  <img  src="assets/imgs/produit_android.png" (click)="gotoProduits()"  />
+                  <p>Produits</p>
+              </div>
+            </ion-col>
+            <ion-col col-4 >
+              <div text-center>
+                  <img  src="assets/imgs/promotion_android.png"   />
+                  <p >Promotions</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <div  text-center>
+                  <img  src="assets/imgs/adresse_android.png"   />
+                  <p >Mes adresses</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <div text-center>
+                  <img  src="assets/imgs/conseil_android.png"   />
+                  <p>Conseils</p>
+              </div>
+            </ion-col>
+            <ion-col col-4 >
+              <div text-center>
+                  <img  src="assets/imgs/reclamtion_android.png" />
+                  <p >Réclamations</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <div  text-center>
+                  <img  src="assets/imgs/fidelite_android.png" />
+                  <p >Fidélité</p>
+              </div>
+            </ion-col>
+            <ion-col col-4 >
+              <div text-center>
+                  <img  src="assets/imgs/assistance_android.png" (click)="gotoAssistance()" />
+                  <p >Assistance</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <div text-center>
+                  <img  src="assets/imgs/solutions_android.png" />
+                  <p>Solutions</p>
+              </div>
+            </ion-col>
+            <ion-col col-4>
+              <div  text-center>
+                  <img  src="assets/imgs/contact_android.png" (click)="gotoContact()"/>
+                  <p >Contact</p>
+              </div>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

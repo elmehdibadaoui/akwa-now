@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Statistiques</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="notifications($event)">
+          <ion-icon name="md-notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="gotoHome()">
+          <ion-icon name="md-home"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-card>
+    <ion-card-header>
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content id="bar">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Doughnut Chart
+    </ion-card-header>
+    <ion-card-content id="areaspline">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Line Chart
+    </ion-card-header>
+    <ion-card-content id="column">
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

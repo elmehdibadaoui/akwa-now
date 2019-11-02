@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Produits</ion-title>
+      <ion-buttons end>
+            <button ion-button icon-only (click)="notifications($event)">
+              <ion-icon name="md-notifications"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="gotoHome()">
+              <ion-icon name="md-home"></ion-icon>
+            </button>
+      </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="contenu">
+    <p id="p1">Afriqia Gaz propose une gamme de produit complète avec des bouteilles de gaz butane de 3.6 kg et 12 kg, de couler rouge pour la marque Afriqia Gaz et blue pour Tissir Gaz</p>
+    <ion-grid text-center>
+        <ion-row>
+            <ion-col col-6>
+                <ion-card-content (click)="show(0)">
+                  <img src="assets/imgs/afriquiagaz.png" class="images" />
+                  <ion-label  class="lblTitle">Afriquia Gaz (6Kg)</ion-label>
+                  <ion-label  class="lblPrix">49Dhs/unité</ion-label>
+                </ion-card-content>
+            </ion-col>
+            <ion-col col-6>
+                <ion-card-content (click)="show(1)">
+                    <img src="assets/imgs/butafric.png" class="images" />
+                    <ion-label  class="lblTitle">Butafric (6kg)</ion-label>
+                    <ion-label  class="lblPrix">49Dhs/unité</ion-label>
+                </ion-card-content>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-6>
+                <ion-card-content (click)="show(2)">
+                  <img src="assets/imgs/NationalGaz.png" class="images" />
+                  <ion-label  class="lblTitle">National Gaz (6Kg)</ion-label>
+                  <ion-label  class="lblPrix">49Dhs/unité</ion-label>
+                </ion-card-content>
+            </ion-col>
+            <ion-col col-6>
+                <ion-card-content (click)="show(3)">
+                    <img src="assets/imgs/tissir.png" class="images" />
+                    <ion-label  class="lblTitle">Tissir (6Kg)</ion-label>
+                    <ion-label  class="lblPrix">49Dhs/unité</ion-label>
+                </ion-card-content>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-6 >
+                <ion-card-content (click)="show(4)">
+                  <img src="assets/imgs/ultragaz.png" class="images" />
+                  <ion-label  class="lblTitle">Ultra Gaz (6Kg)</ion-label>
+                  <ion-label  class="lblPrix">49Dhs/unité</ion-label>
+                </ion-card-content>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

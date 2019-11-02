@@ -1,0 +1,128 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title text-center>Fidélité</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="notifications($event)">
+            <ion-icon name="md-notifications"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="gotoHome()">
+            <ion-icon name="md-home"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+
+    <ion-slides color="primary" [slidesPerView]="3.5">
+        <ion-slide>
+            <button ion-button round color="light" (click)="display('all')">Tous</button>
+        </ion-slide>
+        <ion-slide>
+            <button ion-button round (click)="display('maison')">Maison</button>
+        </ion-slide>
+        <ion-slide>
+            <button ion-button round (click)="display('voyage')">Voyage</button>
+        </ion-slide>
+        <ion-slide>
+            <button ion-button round (click)="display('enfant')">Enfants</button>
+        </ion-slide>
+    </ion-slides>
+
+</ion-header>
+
+<ion-content>
+
+    <!-- Profile -->
+    <ion-grid class="profile bg-white px-4 py-1" >
+        <ion-row >
+            <ion-col col-3 class="p-3"> 
+              <img src="assets/imgs/profil.png" class="rounded" />
+            </ion-col>
+            <ion-col col-8 class="service-utilise-vertical" class="profil-row">
+              <div>
+                <p>Amine El Mansouri</p>
+                <img src="assets/imgs/phone.png" />
+                <span text-center>06 45 75 88 55</span>
+              </div>
+            </ion-col>
+            <ion-col col-1 class="d-flex">
+              <div class="align-self-center">
+                  <img  src="assets/imgs/next.png"  />
+              </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <p class="parag">Découvrez nos offres et bénéficiez de nombreux avantages et cadeaux tout au long de l'année.</p>
+
+    <ion-card *ngIf="toDisplay=='all' || toDisplay=='maison'">
+        <ion-grid class="bg-white avantages" >
+          <!-- Item 1 -->
+          <ion-row>
+            <ion-col col-2 class="d-flex"> 
+                <img class="align-self-center" src="assets/imgs/gapYouness.png"  />
+            </ion-col>
+            <ion-col col> 
+              <h6><small color="gray">Réf.5301</small></h6>
+              <h6><small>Bon d'achat de 200dh</small></h6>
+            </ion-col>
+            <ion-col col-4 class="d-flex"> 
+                <button class="align-self-center orange" ion-button small rounded>1810 Pts</button>
+            </ion-col>
+          </ion-row>          
+        </ion-grid>
+    </ion-card>
+
+    <ion-card *ngIf="toDisplay=='all' || toDisplay=='voyage'">
+        <ion-grid class="bg-white avantages" >
+          <!-- Item 2 -->          
+          <ion-row>
+            <ion-col col-2 class="d-flex"> 
+                <img class="align-self-center" src="assets/imgs/IMAXYouness.png"  />
+            </ion-col>
+            <ion-col col> 
+              <h6><small color="gray">Réf.5301</small></h6>
+              <h6><small>Bon d'achat de 200dh</small></h6>
+            </ion-col>
+            <ion-col col-4 class="d-flex"> 
+                <button class="align-self-center gray" ion-button small rounded>3810 Pts</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+
+      <ion-card *ngIf="toDisplay=='all' || toDisplay=='enfant'">
+          <ion-grid class="bg-white avantages" >
+          <!-- Item 3 -->          
+          <ion-row>
+            <ion-col col-2 class="d-flex"> 
+                <img class="align-self-center" src="assets/imgs/LaGrandeYouness.png"  />
+            </ion-col>
+            <ion-col col> 
+              <h6><small color="gray">Réf.5301</small></h6>
+              <h6><small>Bon d'achat de 150dh</small></h6>
+            </ion-col>
+            <ion-col col-4 class="d-flex"> 
+                <button class="align-self-center pink" ion-button small rounded>1800 Pts</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+
+      <ion-card *ngIf="toDisplay=='all' || toDisplay=='maison'">
+          <ion-grid class="bg-white avantages" >
+          <!-- Item 4 --> 
+          <ion-row>
+            <ion-col col-2 class="d-flex"> 
+                <img class="align-self-center" src="assets/imgs/BershkaYouness.png"  />
+            </ion-col>
+            <ion-col col> 
+              <h6><small color="gray">Réf.5301</small></h6>
+              <h6><small>Bon d'achat de 200dh</small></h6>
+            </ion-col>
+            <ion-col col-4 class="d-flex"> 
+                <button class="align-self-center orange" ion-button small rounded>1810 Pts</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+
+</ion-content>

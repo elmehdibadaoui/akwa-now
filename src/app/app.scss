@@ -1,0 +1,135 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+ion-icon {
+    &[class*="akwa-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    // custom icons
+    &[class*="akwa-home"] {
+        mask-image: url(../assets/imgs/homeMenu.png);
+    }
+    &[class*="akwa-dash"] {
+        mask-image: url(../assets/imgs/dashboardMenu.png);
+    }
+    &[class*="akwa-chat"] {
+        mask-image: url(../assets/imgs/chatMenu.png);
+    }
+    &[class*="akwa-gift"] {
+        mask-image: url(../assets/imgs/giftMenu.png);
+    }
+    &[class*="akwa-more"] {
+        mask-image: url(../assets/imgs/moreMenu.png);
+    }
+    &[class*="akwa-switchOn"] {
+        mask-image: url(../assets/imgs/switchOn.png);
+    }
+    &[class*="akwa-switchOff"] {
+        mask-image: url(../assets/imgs/switchOff.png);
+    }
+}
+
+.scroll-content{
+    overflow: auto;
+}
+
+ion-row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+button:focus{
+    outline: 0;
+}
+
+.notifications-list{
+    margin-bottom: 0;
+    ion-label{
+        font-size: 11px;
+    }
+    label{
+        font-size: 9px;        
+    }
+    img{
+        width: 20px;
+    }
+}
+ion-header{
+    ion-navbar{
+        .toolbar-title{
+            font-size: 17px;
+        }
+        ion-buttons{
+            span{
+                font-size: 12px;
+            }
+            span:first{
+                padding-right: 12px;
+            }
+        }
+    }
+}
+.toolbar-background{
+    background-color: map-get($colors, primary);
+}
+.toolbar-title, .button-inner{
+    color: #fff !important;
+}
+.back-button-text{
+    display: none;
+}
+.profile {
+    img.rounded{
+        border-radius: 5px !important;
+    }
+    .profil-row
+    {
+        display: flex;
+        p{
+            margin: 0;
+            align-self: center;
+            padding-bottom: 5px;
+        }
+        div{
+            align-self: center;
+        }
+        img {
+            width: 8px;
+        }
+        span{
+            font-size: 10px;
+            margin-left: 5px;
+            color: #7c7c7c;
+        }
+    }
+}
+.popover-content{
+    top: 42px !important;
+}

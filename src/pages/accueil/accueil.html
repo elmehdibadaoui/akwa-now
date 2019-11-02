@@ -1,0 +1,157 @@
+<ion-header>
+        <ion-navbar color="primary">
+           <ion-title text-center>Accueil</ion-title>
+           <ion-buttons end class="toolbarRight" >
+              <button ion-button icon-only (click)="showHide()">
+                 <ion-icon name="akwa-switchOn" *ngIf="!isShow" ></ion-icon>
+                 <ion-icon name="akwa-switchOff" *ngIf="isShow"></ion-icon>
+              </button>
+           </ion-buttons>
+        </ion-navbar>
+     </ion-header>
+     <ion-content>
+        <!-- Row 1 -->
+        <ion-grid>
+           <ion-row>
+              <ion-col col-3 class="p-0 d-flex">
+                 <img class="img-line align-self-center" src="assets/imgs/borderleft.png" >
+              </ion-col>
+              <ion-col col-6 class="service-title">
+                 <span  >Fréquenmment<br>utilisées</span>
+              </ion-col>
+              <ion-col col-3 class="p-0 d-flex">
+                 <img class="img-line align-self-center" src="assets/imgs/borderright.png"   />
+              </ion-col>
+           </ion-row>
+        </ion-grid>
+        <ion-grid >
+           <ion-row>
+              <ion-col col-4>
+                 <div class="service-utilise" (click)="gotoProduits()">
+                    <img class="service-img" src="assets/imgs/produit_android.png"   />
+                    <p>Produits</p>
+                 </div>
+              </ion-col>
+              <ion-col col-4>
+                 <div class="service-utilise" (click)="gotoFidelite()">
+                    <img class="service-img" src="assets/imgs/fidelite_android.png"   />
+                    <p >Fidélité</p>
+                 </div>
+              </ion-col>
+              <ion-col col-4>
+                 <div class="service-utilise">
+                    <img class="service-img" src="assets/imgs/promotion_android.png"   />
+                    <p >Promotions</p>
+                 </div>
+              </ion-col>
+           </ion-row>
+        </ion-grid>
+        <!-- Row 2 -->
+        <ion-grid *ngIf="!isShow">
+           <ion-row>
+              <ion-col col-3 class="p-0">
+                 <img class="img-line" src="assets/imgs/borderleft.png"   />
+              </ion-col>
+              <ion-col col-6 class="service-title">
+                 <span  text-center>Services</span>
+              </ion-col>
+              <ion-col col-3 class="p-0">
+                 <img class="img-line" src="assets/imgs/borderright.png"   />
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise" (click)="showApp('5457')">
+                    <img src="assets/imgs/allogaz_android.png"   />
+                    <p >Allo gaz</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise" (click)="showApp('4812')">
+                    <img src="assets/imgs/gaz_vrac_android.png" />
+                    <p >Gaz en vrac</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise" (click)="showApp('4512')">
+                    <img src="assets/imgs/oasis_android.png"   />
+                    <p >Oasis café</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/aloha_android.png"   />
+                    <p >Aloha</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/rapid_auto_android.png"   />
+                    <p >Rapid auto</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/mini_android.png"   />
+                    <p >Mini Brahim</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/auto_go_android.png"   />
+                    <p >Auto GO</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/eho_android.png"   />
+                    <p >Eho</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/speedy2_android.png"   />
+                    <p >Speedy</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/vie_eco_android.png"   />
+                    <p >La vie eco</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/smartpay.png"   />
+                    <p >Smart pay</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/afriquia.png"   />
+                    <p >Afriquia</p>
+                 </div>
+              </ion-col>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/dakkar.png"   />
+                    <p >Dakkar</p>
+                 </div>
+              </ion-col>
+           </ion-row>
+        </ion-grid>
+        <!-- Row 2 false -->
+        <ion-grid *ngIf="isShow">
+           <!-- Ligne 1 -->
+           <ion-row>
+              <ion-col col-3>
+                 <div class="service-utilise">
+                    <img src="assets/imgs/allogaz_android.png"   />
+                 </div>
+              </ion-col>
+              <ion-col col-9>
+                 <span >Allo gaz</span>
+                 <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.</p>
+              </ion-col>
+           </ion-row>
+        </ion-grid>
+        <!--  -->
+     </ion-content>

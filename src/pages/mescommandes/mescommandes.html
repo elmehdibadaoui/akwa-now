@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mes Commandes</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="notifications($event)">
+          <ion-icon name="md-notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="gotoHome()">
+          <ion-icon name="md-home"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+  <div class="row m-0 top-header">
+    <div class="col-6 pr-0">
+        <button class="btn-header btn-favs active" (click)="showCmd(this)" ion-button>Toutes Les Commandes</button>
+    </div>
+    <div class="col-6 pl-0">
+        <button class="btn-header btn-cmds" (click)="showFav(this)" ion-button>Favorites</button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content color="primary">
+
+  <!-- Mes Commandes Section -->
+  <div class="row mx-0 mt-3" *ngFor="let commande of commandes">
+    <div class="col-12 p-2 bg-white" *ngIf="isFav && commande.favori || !isFav">
+        <div class="row m-0">
+            <div class="col-12 p-0">
+                <div class="row m-0">
+                  <div class="col-2 p-0">
+                    <img class="" src="{{commande.image}}" />
+                  </div>
+                  <div class="col-6 p-2">
+                    <label class="m-0 font-weight-bold">{{commande.title}}</label>
+                    <label class="m-0 text-gray"><small><ion-icon name="navigate"></ion-icon> Brahim roudani 244</small></label>
+                    <label class="m-0 font-weight-bold text-blue">Quantité: {{commande.quantity}}</label>        
+                  </div>
+                  <div class="col-4 p-2 text-right">
+                      <label class="m-0">
+                        <ion-icon name="md-star"      class="fav-icon active" (click)="setFav(commande.id)" *ngIf="commande.favori"></ion-icon>              
+                        <ion-icon name="star-outline" class="fav-icon"        (click)="setFav(commande.id)" *ngIf="!commande.favori"></ion-icon>              
+                      </label>
+                      <button class="btn-etat red"    ion-button small rounded *ngIf="commande.etat=='En attente'">En attente</button>
+                      <button class="btn-etat yellow" ion-button small rounded *ngIf="commande.etat=='En cours'">En cours</button>
+                      <button class="btn-etat green"  ion-button small rounded *ngIf="commande.etat=='Livrée'">Livrée</button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 p-0 border-top ">
+              <div class="row m-0">
+                <div class="col">
+                    <label class="m-0 h4"> <small>Montant Total</small></label> <br>
+                    <label class="m-0 font-weight-bold h3">140 dhs</label>
+                </div>
+                <div class="col text-right">
+                    <button class="orange btn-cmd " ion-button small rounded>Repasser La <br>Commande</button>          
+                    <ion-icon name="ios-trash-outline" class="icon-trash" (click)="removeCmd(commande.id)" item-end></ion-icon>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Favorites Section -->
+  
+  
+</ion-content>

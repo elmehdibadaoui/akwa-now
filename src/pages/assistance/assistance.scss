@@ -1,0 +1,28 @@
+page-assistance {
+    .messages{
+        img{
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            margin-top: 10px;
+        }
+        ion-card{
+            border-radius: 20px;
+        }
+        ion-card , ion-card-content{
+            width: fit-content;
+        } 
+        label{
+            margin: 0;
+        }
+    }
+    // ion-footer{
+    //     background-color: #fff;
+    // }
+    .last-row{
+        background-color: #fff;        
+        position: fixed;
+        width: 98%;
+        bottom: 0;
+    }
+}

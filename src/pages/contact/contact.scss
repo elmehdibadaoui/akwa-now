@@ -1,0 +1,29 @@
+page-contact {
+    .txt{
+        width: 80%;
+        height: 30px;
+        border-radius: 5px;
+        border-width: 0.08em;
+        position: relative;
+        border: 1px solid #dedede;
+        padding: 2px 5px;
+    }
+    .txtArea
+    {
+        width: 80%;
+        height: 90px;
+        border-radius: 5px;
+        border-width: 0.08em;
+        position: relative;
+        border-color: lightgray;
+    }
+   .btnEnvoyer
+   {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px
+   }
+   #imgAkwa{
+       width: 200px !important;
+   }
+}

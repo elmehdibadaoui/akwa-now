@@ -1,0 +1,69 @@
+page-mescommandes {
+    .scroll-content{
+        background-color: map-get($colors, light);
+        padding: 0 10px;
+    }
+    .top-header{
+        background-color: map-get($colors, primary);        
+    }
+    .item-inner{
+        border: none !important;
+    }
+    .btn-header{
+        border-radius: 0;
+        font-size: 10px;
+        font-weight: 500;
+        width: 100%;
+    }
+    .btn-header.active{
+        background-color: #fff;
+        span{
+            color: map-get($colors, primary) !important;
+        }
+    }
+    .text-blue{
+        color: #2177a4;
+    }
+    .text-gray{
+        color: #838383;        
+    }
+    .btn-cmd{
+        font-size: 9px;
+        font-weight: 500;
+        border-radius: 5px;
+        padding: 19px 20px;
+        background-color:gray !important; 
+        line-height: 12px;       
+    }
+    .btn-etat{
+        font-size: 9px;
+        font-weight: 200;
+        border-radius: 9px;
+        padding: 12px 11px;
+        width: 100%;
+        text-transform: initial;
+    }
+    .btn-etat.red{
+        background-color:#c93434 !important;
+    }
+    .btn-etat.yellow{
+        background-color:#ebc532 !important;
+    }
+    .btn-etat.green{
+        background-color:#2cea45 !important;
+    }
+    .fav-icon{
+        font-size: 33px;
+        color: gray;
+    }
+    .fav-icon.active{
+        color: #ebc532;        
+    }
+    .icon-trash{
+        font-size: 33px;
+        position: relative;
+        top: 14px;
+        right: 0;
+        line-height: 0;
+    }
+}

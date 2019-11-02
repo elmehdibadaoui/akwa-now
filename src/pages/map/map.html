@@ -1,0 +1,24 @@
+<!--
+  Generated template for the MapPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>map</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+  <div id="locationField">
+      <input id="autocomplete" placeholder="Enter your address"
+               type="text" style="width: 100%" />
+  </div>
+  <div id="map" style="height: 100%"></div>
+  <button ion-button (click)="drawPath()" style="position: absolute; bottom: 0;">Show Me</button>
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Plus</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- Profile -->
+    <ion-grid class="profile bg-white px-4 py-1" >
+        <ion-row >
+            <ion-col col-3 class="p-3"> 
+                <img src="assets/imgs/profil.png" class="rounded" />
+            </ion-col>
+            <ion-col col-8 class="service-utilise-vertical" class="profil-row">
+                <div>
+                    <p>Amine El Mansouri</p>
+                    <img src="assets/imgs/phone.png" />
+                    <span text-center>06 45 75 88 55</span>
+                </div>
+            </ion-col>
+            <ion-col col-1 class="d-flex">
+                <div class="align-self-center">
+                    <img  src="assets/imgs/next.png"  />
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-list>
+        <ion-item >
+            <img src="assets/imgs/plus_apropos.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >A props de l'application</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/plus_mon_compte.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Mon Compte</label>
+        </ion-item>
+        <ion-item (click)="goToContact()">
+            <img src="assets/imgs/plus_contact.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Contactez-nous</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/plus_langue.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Langue</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/plus_partager.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Partagez l'application</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/plus_noter.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Noter l'applications</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/plus_ajouter.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >Ajouter ou supprimer des services</label>
+        </ion-item>
+        <ion-item >
+            <img src="assets/imgs/loginMenuTap.png" style="width: 10%;"> &nbsp; &nbsp; &nbsp;
+            <label class="titleSpan" >S'identifier</label>
+        </ion-item>
+      </ion-list>
+</ion-content>
